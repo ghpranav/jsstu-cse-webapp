@@ -9,6 +9,8 @@ import App from "./App";
 // import * as serviceWorker from './serviceWorker';
 import authReducer from "./store/reducers/auth";
 
+import "./assets/css/material-dashboard-react.css?v=1.8.0";
+
 const rootReducer = combineReducers({
   auth: authReducer
 });
