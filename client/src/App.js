@@ -39,18 +39,56 @@ class App extends Component {
             render={() => <Landing loggedIn={this.props.loggedIn} />}
           />
           <Route
-            path="/dashboard" exact
-            render={() => <Dashboard loggedIn={this.props.loggedIn} user={this.props.user} />}
+            path="/dashboard"
+            exact
+            render={() => (
+              <Dashboard
+                loggedIn={this.props.loggedIn}
+                user={this.props.user}
+              />
+            )}
           />
-          <Route path="/dashboard/publications" render={() => <Publication loggedIn={this.props.loggedIn} user={this.props.user} />}
+          <Route
+            path="/dashboard/publications"
+            render={() => (
+              <Publication
+                loggedIn={this.props.loggedIn}
+                user={this.props.user}
+              />
+            )}
           />
-          <Route path="/dashboard/researchs" render={() => <Research loggedIn={this.props.loggedIn} user={this.props.user} />}
+          <Route
+            path="/dashboard/researchs"
+            render={() => (
+              <Research loggedIn={this.props.loggedIn} user={this.props.user} />
+            )}
           />
-          <Route path="/dashboard/awards" render={() => <Awards loggedIn={this.props.loggedIn} user={this.props.user} />}
+          <Route
+            path="/dashboard/awards"
+            render={() => (
+              <Awards loggedIn={this.props.loggedIn} user={this.props.user} />
+            )}
           />
-          <Route path="/dashboard/training" render={() => <Training loggedIn={this.props.loggedIn} user={this.props.user} />}
+          <Route
+            path="/dashboard/training/conducted"
+            render={() => (
+              <Training loggedIn={this.props.loggedIn} user={this.props.user} />
+            )}
           />
-          <Route path="/dashboard/subject" render={() => <Subject loggedIn={this.props.loggedIn} user={this.props.user} />}
+          <Route
+            path="/dashboard/training/attended"
+            render={() => (
+              <TrainingAttended
+                loggedIn={this.props.loggedIn}
+                user={this.props.user}
+              />
+            )}
+          />
+          <Route
+            path="/dashboard/subject"
+            render={() => (
+              <Subject loggedIn={this.props.loggedIn} user={this.props.user} />
+            )}
           />
           <Route path="/faculty" render={() => <Faculty />} />
           <Redirect to="/" />
